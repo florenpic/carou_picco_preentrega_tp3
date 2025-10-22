@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio Multimedial — Grupo</title>
+
+  <!-- Enlace al CSS separado -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">GM</div>
+        <div>
+          <div style="font-weight:700">Grupo — Portfolio</div>
+          <div class="muted" style="font-size:.82rem">Artistas Multimediales</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio" class="navlink active">Inicio</a></li>
+          <li><a href="#trabajos" class="navlink">Trabajos</a></li>
+          <li><a href="#galeria" class="navlink">Galería</a></li>
+          <li><a href="#sobre-nosotros" class="navlink">Sobre Nosotros</a></li>
+          <li><a href="#contacto" class="navlink">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="inicio" class="hero" aria-labelledby="titulo-principal">
+      <div>
+        <h1 id="titulo-principal">Portfolio Multimedial — Grupo de Trabajo</h1>
+        <p>Presentación del equipo y breve descripción. Aquí van trabajos realizados en otras materias y proyectos personales.</p>
+
+        <section id="trabajos" aria-labelledby="trabajos-titulo">
+          <h2 id="trabajos-titulo">Trabajos destacados</h2>
+          <div class="works" id="works-list">
+            <!-- Ejemplos estáticos: reemplaza las rutas por tus imágenes en assets/images/ -->
+            <article class="work">
+              <img src="assets/images/trabajo1.jpg" alt="Trabajo 1">
+              <h3>Proyecto 1 — Diseño Interactivo</h3>
+              <p class="muted">Materia: Interacción Humano Computadora — Año</p>
+            </article>
+            <article class="work">
+              <img src="assets/images/trabajo2.jpg" alt="Trabajo 2">
+              <h3>Proyecto 2 — Animación</h3>
+              <p class="muted">Materia: Animación Digital — Año</p>
+            </article>
+            <article class="work">
+              <img src="assets/images/trabajo3.jpg" alt="Trabajo 3">
+              <h3>Proyecto 3 — Videoarte</h3>
+              <p class="muted">Materia: Videoarte — Año</p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="team-card" id="sobre-nosotros">
+        <h3>Sobre Nosotros</h3>
+        <p class="muted">Grupo de 3-4 integrantes. Incluir roles: dirección artística, programación, sonido, diseño gráfico, etc.</p>
+        <ul>
+          <li><strong>Integrante 1</strong> — Dirección artística</li>
+          <li><strong>Integrante 2</strong> — Programación</li>
+          <li><strong>Integrante 3</strong> — Diseño / Sonido</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- ====== Galería dinámica ====== -->
+    <section id="galeria" style="margin-top:2.2rem">
+      <h2>Galería</h2>
+      <p class="muted">Galería con imágenes .jpg. Puedes agregar imágenes estáticas en assets/images/ o subir desde aquí (solo mostrará en tu navegador localmente).</p>
+
+      <div style="display:flex;gap:1rem;align-items:center;margin-bottom:1rem;flex-wrap:wrap">
+        <label style="display:flex;flex-direction:column;gap:.4rem">
+          <span class="muted">Subir imágenes (.jpg/.jpeg/.png)</span>
+          <input id="image-input" type="file" accept="image/jpeg,image/png" multiple />
+        </label>
+
+        <button id="btn-clear" type="button">Limpiar vistas</button>
+
+        <!-- Instrucciones para agregar imagenes estaticas al proyecto -->
+        <div class="muted" style="font-size:.86rem">Instrucciones (estático): coloca tus .jpg en <code>assets/images/</code> y referencia en el HTML (<code>&lt;img src="assets/images/tuImagen.jpg"&gt;</code>).</div>
+      </div>
+
+      <div class="gallery-grid" id="gallery"></div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button id="lb-close" style="position:absolute;top:18px;right:24px;background:transparent;border:none;color:#fff;font-size:1.4rem;cursor:pointer">✕</button>
+        <img id="lb-img" alt="Ampliación de imagen">
+      </div>
+    </section>
+
+    <!-- ====== Contacto ====== -->
+    <section id="contacto" style="margin-top:2.2rem">
+      <h2>Contacto</h2>
+      <div class="contact-grid">
+        <div>
+          <form id="contact-form">
+            <label>Nombre<input type="text" id="name" placeholder="Tu nombre" required></label>
+            <label>Email<input type="email" id="email" placeholder="tu@correo.com" required></label>
+            <label>Mensaje<textarea id="message" rows="5" placeholder="Escribe tu mensaje..."></textarea></label>
+            <div style="display:flex;gap:.6rem;align-items:center">
+              <button type="submit">Enviar</button>
+              <button type="button" id="save-contact">Guardar localmente</button>
+            </div>
+          </form>
+
+          <p class="muted" style="margin-top:.6rem">Nota: el formulario usa <code>mailto:</code> y almacenamiento local para pruebas. Para envío real necesitarás backend o servicio (Formspree, Netlify Forms, etc.).</p>
+        </div>
+
+        <aside class="team-card">
+          <h3>Detalles de contacto</h3>
+          <p class="muted">Email: <a id="contact-mail" href="mailto:grupo@ejemplo.com">grupo@ejemplo.com</a></p>
+          <p class="muted">Teléfono: +54 9 11 1234-5678</p>
+          <h4>Agregar más info</h4>
+          <p class="muted">Puedes editar este bloque directamente en el HTML o en tu CMS local.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="anio"></span> — Portfolio Multimedial. Hecho con HTML5, CSS3 y JavaScript.</small>
+    </div>
+  </footer>
+
+  <!-- Enlace al JS separado -->
+  <script src="script.js"></script>
+</body>
+</html>
