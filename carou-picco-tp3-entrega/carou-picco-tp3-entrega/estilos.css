@@ -1,0 +1,264 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: url('img/fondo.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #e9f2f4; 
+  color: #222;
+}
+
+#contenedor_principal {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(0, 116, 129);
+}
+
+header {
+  text-align: center;       
+  background: none;          
+  padding: 40px 0;          
+}
+
+header a {
+  display: inline-block;    
+}
+
+header a img {
+  width: 680px;              
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#contenido_general {
+  display: flex;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+}
+
+nav {
+  width: 220px;
+  background-color: #007481;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+nav .nav-boton { display: none; } 
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 6px;
+  background-color: #008b99;
+  margin: 6px 8px;
+  border-radius: 4px;
+
+}
+nav a.activo { 
+    background-color: #005b64; 
+}
+
+nav a:hover { 
+    background-color: #006a78; 
+}
+
+main {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.logo-principal {
+  display: block;
+  margin: 40px auto;       
+  width: 280px;           
+  height: auto;
+}
+
+#tabla_imagen {
+  background-color: #a0f4f8a1;
+  border-collapse: collapse;
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+#tabla_imagen td {
+  border: none;
+}
+
+#tabla_imagen img {
+  display: inline-block;
+  border-radius: 10px;
+  width: 340px; 
+  height: auto;
+}
+
+.color_cian { background-color: #66b4be; }
+
+#calendario { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+}
+
+#calendario thead td { 
+    background: #66b4be; 
+    color: #243d3f; 
+    padding: 8px; 
+}
+
+#calendario td { 
+    border: 1px solid #66b4be; 
+    padding: 8px; 
+    background: #f0ffff; 
+    text-align: center; 
+}
+
+#cuadro_nosotras { 
+    display: flex; 
+    gap: 16px; 
+    justify-content: space-between; 
+    background: #fff; 
+    border: 2px solid #66b4be; 
+    padding: 16px; 
+    border-radius: 6px; 
+}
+
+.perfil { 
+    width: 48%; 
+}
+
+.foto_perfil { 
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 6px; 
+    border: 2px solid #66b4be; 
+}
+
+.galeria { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 12px; 
+    justify-content: center; 
+}
+
+.miniatura { 
+    display: block; 
+    width: 180px; 
+    padding: 10px; 
+    text-decoration: none; 
+    color: #333; 
+    text-align: center; 
+    background: #f8f9fa; 
+    border-radius: 6px; 
+}
+
+.miniatura img {
+  width: 140px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #66b4be;
+  border-radius: 6px;
+  transition: transform 0.18s ease; 
+}
+
+.imagen_grande {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2000;
+}
+
+.imagen_grande img {
+  max-width: 80%;
+  max-height: 80%;
+  border: 3px solid #66b4be;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.imagen_grande p {
+  color: white;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.imagen_grande.mostrar {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+#cuadro_proyecto {
+    background:#fff; 
+    border:2px solid #66b4be; 
+    padding:18px; 
+    border-radius:8px; 
+}
+
+footer { 
+    background-color: #007481; 
+    color: white; 
+    text-align: center; 
+    padding: 12px; 
+    margin-top: 12px; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+th, td { 
+    border: 1px solid #007481; 
+    padding: 8px; 
+    text-align: center; 
+}
+
+th { 
+    background-color: #007481; 
+    color: white; 
+}
+
+@media screen and (max-width: 900px) {
+  #contenido_general { flex-direction: column; }
+  nav { width: 100%; display:flex; flex-direction: row; justify-content: space-around; }
+  nav a { margin: 6px; padding: 8px; }
+  #cuadro_nosotras { flex-direction: column; }
+}

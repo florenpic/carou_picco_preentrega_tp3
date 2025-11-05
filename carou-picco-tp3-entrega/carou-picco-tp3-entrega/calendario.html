@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon_32x32.png">
+</head>
+<body>
+  <div id="contenedor_principal">
+    <header>
+      <a href="http://www.multimedia.una.edu.ar" target="_blank" rel="noopener noreferrer">
+        <img src="img/logo.png" alt="Universidad Nacional de las Artes Multimedia">
+      </a>
+    </header>
+
+    <div id="contenido_general">
+      <nav>
+        <button id="menuBoton" class="nav-boton" onclick="accion()">Menú</button>
+        <a name="enlace" class="desaparecer boton01" href="index.html">Inicio</a>
+        <a name="enlace" class="desaparecer boton02_activo" href="calendario.html">Calendario</a>
+        <a name="enlace" class="desaparecer boton03" href="nosotras.html">Nosotras</a>
+        <a name="enlace" class="desaparecer boton04" href="galeria.html">Galería</a>
+        <a name="enlace" class="desaparecer boton05" href="proyectos.html">Proyectos</a>
+      </nav>
+
+      <main>
+        <section>
+          <h2 id="subtitulo_calendario">1° Año</h2>
+          <table id="calendario">
+            <thead>
+              <tr>
+                <td>Materia</td>
+                <td>Cátedra</td>
+                <td>Día</td>
+                <td>Horario</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Proyecto Visual 1</td><td>Domergue / Serrano / Gómez</td><td>Viernes</td><td>10 a 14 / 14 a 18 / 18 a 22</td></tr>
+              <tr><td>Laboratorio de Sonido 1</td><td>Martínez / Cura</td><td>Martes</td><td>10 a 14 / 14 a 18 / 18 a 22</td></tr>
+              <tr><td>Informática General</td><td>Drelichman / Tirigall</td><td>Lunes</td><td>9 a 13 / 14 a 18 / 19 a 23</td></tr>
+              <tr><td>Artes Multimediales 1</td><td>Lacabanne / Groisman / Pirotta</td><td>Miércoles</td><td>9 a 14 / 14 a 18 / 18 a 23</td></tr>
+              <tr><td>Historia Sociocultural del Arte 1</td><td>Zabala</td><td>Jueves</td><td>10 a 13</td></tr>
+              <tr><td>Historia Sociocultural del Arte 2</td><td>Mauro</td><td>Jueves</td><td>18 a 22</td></tr>
+              <tr><td>Semiología General</td><td>Martínez / Mendoza / Rocha / Accorinti</td><td>Lunes / Martes / Jueves</td><td>16 a 18 / 12 a 14</td></tr>
+              <tr><td>Semiótica de las Artes Audiovisuales</td><td>---</td><td>---</td><td>---</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="subtitulo_calendario">2° Año</h2>
+          <table id="calendario">
+            <thead>
+              <tr>
+                <td>Materia</td><td>Cátedra</td><td>Día</td><td>Horario</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Proyecto Visual 2</td><td>Saiz / Serrano / Gómez / Domergue</td><td>Viernes</td><td>10 a 14 / 14 a 18 / 18 a 22 / 19 a 23</td></tr>
+              <tr><td>Laboratorio de Sonido 2</td><td>Romero / Costas</td><td>Martes</td><td>10 a 14 / 18 a 22</td></tr>
+              <tr><td>Informática Aplicada 1</td><td>Samaruga / Bedoian</td><td>Lunes</td><td>10 a 14 / 19 a 23</td></tr>
+              <tr><td>Artes Multimediales 2</td><td>Tirigall / Rodríguez</td><td>Miércoles</td><td>14 a 19 / 18 a 23</td></tr>
+              <tr><td>Tecnología de Redes Informáticas</td><td>Palacios</td><td>Jueves</td><td>19 a 23</td></tr>
+              <tr><td>Audiovisión 1</td><td>Sosa</td><td>Jueves</td><td>9 a 12</td></tr>
+              <tr><td>Historia Sociocultural del Arte 3</td><td>Zabala / Cardoso</td><td>Jueves</td><td>18 a 21</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="subtitulo_calendario">3° Año</h2>
+          <table id="calendario">
+            <thead>
+              <tr><td>Materia</td><td>Cátedra</td><td>Día</td><td>Horario</td></tr>
+            </thead>
+            <tbody>
+              <tr><td>Proyecto Visual 3</td><td>Serrano / Gómez</td><td>Viernes</td><td>10 a 14 / 19 a 23</td></tr>
+              <tr><td>Laboratorio de Sonido 3</td><td>Abregú / Cetta</td><td>Martes</td><td>10 a 14 / 18 a 22</td></tr>
+              <tr><td>Artes Multimediales 3</td><td>Causa</td><td>Miércoles</td><td>18 a 23</td></tr>
+              <tr><td>Audiovisión 2</td><td>Corazza</td><td>Jueves</td><td>10 a 14 / 18 a 22</td></tr>
+              <tr><td>Informática Aplicada 2</td><td>Tirigall / Causa</td><td>Lunes</td><td>10 a 14 / 19 a 23</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="subtitulo_calendario">4° Año</h2>
+          <table id="calendario">
+            <thead>
+              <tr><td>Materia</td><td>Cátedra</td><td>Día</td><td>Horario</td></tr>
+            </thead>
+            <tbody>
+              <tr><td>Artes Multimediales 4</td><td>Lacabanne / Gendin</td><td>Miércoles</td><td>9 a 14 / 18 a 23</td></tr>
+              <tr><td>Filosofía y Estética</td><td>Lucero / Dorr</td><td>Lunes</td><td>18 a 22</td></tr>
+              <tr><td>Organización y Producción de Eventos</td><td>Rizzi</td><td>Jueves</td><td>17 a 19</td></tr>
+              <tr><td>Metodología de la Investigación</td><td>Dorr</td><td>Martes</td><td>19 a 22</td></tr>
+              <tr><td>Historia de las Artes Audiovisuales</td><td>Rizzi</td><td>Jueves</td><td>19 a 22</td></tr>
+              <tr><td>Seminario de Actualización A</td><td>---</td><td>---</td><td>---</td></tr>
+              <tr><td>Seminario de Actualización B</td><td>---</td><td>---</td><td>---</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <address>Diseñado por <a href="mailto:caroucatalina04@gmail.com" target="_blank" rel="noopener noreferrer">Catalina Carou</a></address>
+      <address>Diseñado por <a href="mailto:florenciaapicco@gmail.com" target="_blank" rel="noopener noreferrer">Florencia Picco</a></address>
+    </footer>
+  </div>
+
+  <script src="funciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon_32x32.png">
+</head>
+<body>
+  <div id="contenedor_principal">
+    <header>
+      <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    </header>
+
+    <div id="contenido_general">
+      <nav>
+        <button id="menuBoton" class="nav-boton" onclick="accion()">Menú</button>
+        <a name="enlace" class="desaparecer boton01" href="index.html">Inicio</a>
+        <a name="enlace" class="desaparecer boton02" href="calendario.html">Calendario</a>
+        <a name="enlace" class="desaparecer boton03" href="nosotras.html">Nosotras</a>
+        <a name="enlace" class="desaparecer boton04_activo" href="galeria.html">Galería</a>
+        <a name="enlace" class="desaparecer boton05" href="proyectos.html">Proyectos</a>
+      </nav>
+
+      <main>
+        <section class="galeria">
+  <a class="miniatura" data-src="img/img-recorrido-visual.jpg" data-desc="Recorrido Visual - Catalina Carou">
+    <img src="img/img-recorrido-visual.jpg" alt="Recorrido Visual - Catalina Carou" width="140" height="150">
+    <span>Recorrido Visual - Catalina Carou</span>
+  </a>
+
+  <a class="miniatura" data-src="img/prueba-de-color.jpg" data-desc="Prueba de Color - Catalina Carou">
+    <img src="img/prueba-de-color.jpg" alt="Prueba de Color - Catalina Carou" width="140" height="150">
+    <span>Prueba de Color - Catalina Carou</span>
+  </a>
+
+  <a class="miniatura" data-src="img/edicion-y-montaje.jpeg" data-desc="Edición y Montaje - Florencia Ayelén Picco">
+    <img src="img/edicion-y-montaje.jpeg" alt="Edición y Montaje - Florencia Ayeén Picco" width="140" height="150">
+    <span>Edición y Montaje - Florencia Ayelén Picco</span>
+  </a>
+
+  <a class="miniatura" data-src="img/hitos-de-la-deriva.jpeg" data-desc="Hitos de la Deriva - Florencia Ayelén Picco">
+    <img src="img/hitos-de-la-deriva.jpeg" alt="Hitos de la Deriva - Florencia Ayelén Picco" width="140" height="150">
+    <span>Hitos de la Deriva - Florencia Ayelén Picco</span>
+  </a>
+
+  <!-- Modal de imagen grande -->
+  <div id="imagen_grande" class="imagen_grande">
+    <button id="cerrar" class="cerrar">×</button>
+    <img id="img_mostrar" src="" alt="Imagen ampliada">
+    <p id="descripcion"></p>
+  </div>
+</section>
+
+      </main>
+    </div>
+
+    <footer>
+      <address>Diseñado por <a href="mailto:caroucatalina04@gmail.com" target="_blank" rel="noopener noreferrer">Catalina Carou</a></address>
+      <address>Diseñado por <a href="mailto:florenciaapicco@gmail.com" target="_blank" rel="noopener noreferrer">Florencia Picco</a></address>
+    </footer>
+  </div>
+
+  <script src="funciones.js"></script>
+</body>
+</html>
